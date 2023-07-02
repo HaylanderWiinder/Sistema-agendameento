@@ -18,9 +18,7 @@ public class AgendamentoApp {
         this.horariosDisponiveis = Arrays.asList("10:00", "14:00", "16:00");
     }
 
-    /**
-     * Exibe o menu principal e aguarda as entradas do usuário.
-     */
+    
     public void exibirMenu() {
         boolean sair = false;
 
@@ -32,7 +30,7 @@ public class AgendamentoApp {
             System.out.print("Escolha uma opção: ");
 
             int opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar o buffer do scanner
+            scanner.nextLine(); 
 
             switch (opcao) {
                 case 1:
@@ -53,9 +51,7 @@ public class AgendamentoApp {
         System.out.println("Encerrando o programa. Até mais!");
     }
 
-    /**
-     * Solicita os detalhes do agendamento (horário, cliente, profissional) e tenta agendar o horário especificado.
-     */
+   
     public void realizarAgendamento() {
         System.out.print("Digite o horário do agendamento: ");
         String horario = scanner.nextLine();
@@ -80,9 +76,7 @@ public class AgendamentoApp {
     }
 
 
-    /**
-     * Solicita o ID do agendamento a ser cancelado e executa o cancelamento.
-     */
+   
     public void realizarCancelamento() {
         System.out.print("Digite o ID do agendamento a ser cancelado: ");
         int id = scanner.nextInt();
@@ -94,11 +88,7 @@ public class AgendamentoApp {
         agendamentoService.cancelar(agendamento);
     }
 
-    /**
-     * Exibe uma mensagem na tela para o usuário.
-     *
-     * @param mensagem A mensagem a ser exibida.
-     */
+    
     public void exibirMensagem(String mensagem) {
         System.out.println(mensagem);
     }
