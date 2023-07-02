@@ -15,12 +15,7 @@ public class AgendamentoDAO {
         this.conexao = FabricaDeConexao.getConexao();
     }
 
-    /**
-     * Busca um agendamento no banco de dados com base no horário especificado.
-     *
-     * @param horario Horário do agendamento a ser buscado.
-     * @return O agendamento encontrado ou null se não existir.
-     */
+  
     public Agendamento buscarAgendamento(String horario) {
         String query = "SELECT * FROM project_agendamento.agendamento WHERE horario = ?";
 
@@ -45,11 +40,7 @@ public class AgendamentoDAO {
     }
 
 
-    /**
-     * Insere um novo agendamento no banco de dados.
-     *
-     * @param agendamento O agendamento a ser inserido.
-     */
+ 
     public void agendarAgendamento(Agendamento agendamento) {
         String query = "INSERT INTO agendamento (horario, cliente, profissional) VALUES (?, ?, ?)";
 
@@ -64,11 +55,7 @@ public class AgendamentoDAO {
         }
     }
 
-    /**
-     * Remove um agendamento do banco de dados.
-     *
-     * @param agendamento O agendamento a ser removido.
-     */
+   
     public void removerAgendamento(Agendamento agendamento) {
         String query = "DELETE FROM agendamento WHERE id = ?";
 
